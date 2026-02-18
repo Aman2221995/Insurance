@@ -69,7 +69,13 @@ export default function UserForm({ onClose, showModal, userData = null }) {
     else if (!validateEmail(form.email))
       e.email = "Enter a valid email address.";
 
-    if (!isEdit && !form.password.trim()) e.password = "Password is required.";
+
+    if (!isEdit && form.password.trim()) {
+      const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+      if (!strongPasswordRegex.test(form.password)) {
+        e.password = "Strong password is required. It should be at least 8 characters long and include uppercase, lowercase, number, and special character.";
+      }
+    }
 
     if (!form.role) e.role = "Select a role.";
 

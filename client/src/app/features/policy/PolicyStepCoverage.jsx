@@ -11,6 +11,14 @@ const PolicyStepCoverage = ({ data, onNext, onBack, onChange, onCancel }) => {
     if (!data.sumInsured || Number(data.sumInsured) <= 0)
       e.sumInsured = "Sum insured must be greater than 0.";
 
+    if(Number(data.sumInsured)<=Number(data.retentionLimit || (Number(data.sumInsured)<=Number(data.premium)))){
+      e.sumInsured = "Sum insured must be greater than retention limit and premium.";
+    }
+
+    if(Number(data.retentionLimit) <=Number(data.premium)){
+      e.retentionLimit = "Retention limit must be greater than premium.";
+    }
+
     if (!data.premium || Number(data.premium) <= 0)
       e.premium = "Premium must be greater than 0.";
 

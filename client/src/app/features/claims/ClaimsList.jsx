@@ -132,7 +132,7 @@ export default function ClaimsList() {
 
             {isCreateAllowed && (
               <button className="btn btn-info" onClick={onCreate}>
-                <i className="bi bi-plus-lg me-1"></i>
+                
                 Create Claim
               </button>
             )}
