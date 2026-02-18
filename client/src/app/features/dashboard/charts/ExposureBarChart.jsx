@@ -18,7 +18,7 @@ export default function ExposureBarChart({ data }) {
         <YAxis />
         <Tooltip formatter={(v) => `₹ ${v.toLocaleString()}`} />
         <Legend />
-        <Bar dataKey="totalSumInsured" fill="#198754" name="Sum Insured" />
+        <Bar dataKey="totalSumInsured" fill="#3183a6" name="Sum Insured" />
       </BarChart>
     </ResponsiveContainer>
   );

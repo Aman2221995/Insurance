@@ -56,16 +56,16 @@ export default function Login() {
       <div
         className="container-fluid vh-100 d-flex align-items-center justify-content-center"
         style={{
-          background: "linear-gradient(135deg, #194187 0%, #2b0f51 100%)",
+          background: "linear-gradient(135deg, #3d639d 0%, #bfb6cb 100%)",
         }}
       >
         <div
-          className="card shadow-lg border-0 rounded-4"
+          className="card shadow-lg border-0 rounded-5"
           style={{ maxWidth: 920, width: "100%" }}
         >
           <div className="row g-0">
             <div className="col-md-5 bg-dark text-white d-flex flex-column align-items-center justify-content-center p-5 rounded-start-4">
-              <img src={logo} alt="Logo" width={90} className="mb-3" />
+            
               <h4
                 className="fw-bold text-uppercase text-center mb-2"
                 style={{ letterSpacing: "6px" }}
@@ -80,6 +80,7 @@ export default function Login() {
             <div className="col-md-7 p-5">
               <form onSubmit={submit} noValidate>
                 <div className="mb-3">
+                  <div className="fw-bold fs-5 mb-4 ">Login</div>
                   <label className="form-label">Email address</label>
                   <input
                     type="email"
@@ -109,7 +110,7 @@ export default function Login() {
 
                 <button
                   type="submit"
-                  className="btn btn-success w-100 mt-3 d-flex align-items-center justify-content-center gap-2"
+                  className="btn btn-secondary w-100 mt-3 d-flex align-items-center justify-content-center gap-2"
                   disabled={!form.email || !form.password || isLoading}
                 >
                   {isLoading ? "Signing In..." : "Sign In"}

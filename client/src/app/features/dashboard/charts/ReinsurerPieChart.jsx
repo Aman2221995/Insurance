@@ -7,7 +7,7 @@ import {
   Legend,
 } from "recharts";
 
-const COLORS = ["#198754", "#31a681", "#1a5947", "#9f122c"];
+const COLORS = ["#3183a6", "#3162a6", "#1a2b59", "#e7e3e5"];
 
 export default function ReinsurerPieChart({ data }) {
   return (

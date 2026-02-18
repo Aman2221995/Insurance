@@ -15,10 +15,10 @@ export default function TopBar({ links }) {
   };
 
   return (
-    <nav className="navbar navbar-dark bg-dark bg-gradient shadow px-4 py-3 sticky-top">
+    <nav className="navbar navbar-expand-lg bg-primary-subtle bg-gradient px-4 py-3 sticky-top">
       <div className="container-fluid d-flex align-items-center">
         <span
-          className="navbar-brand mb-0 h1 text-white"
+          className="navbar-brand mb-0 h1 text-black"
           style={{ letterSpacing: 9 }}
         >
           
@@ -42,7 +42,7 @@ export default function TopBar({ links }) {
                   to={link.url}
                   onClick={() => setIsMenuOpen(false)}
                   className={({ isActive }) =>
-                    `nav-link nav-success-link ${isActive ? "active" : ""}`
+                    `nav-link nav-light-link ${isActive ? "active" : ""}`
                   }
                 >
                   {link.label}
@@ -52,7 +52,7 @@ export default function TopBar({ links }) {
           </ul>
 
           <button
-            className="btn btn-sm btn-outline-light mb-2 mb-lg-0 ms-lg-3"
+            className="btn btn-sm btn-outline-dark mb-2 mb-lg-0 ms-lg-3"
             onClick={handleLogout}
           >
             Logout

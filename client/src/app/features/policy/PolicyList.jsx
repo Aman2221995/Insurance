@@ -109,8 +109,8 @@ export default function PolicyList() {
             </div>
 
             {isCreateAllowed && (
-              <button className="btn btn-success" onClick={onCreate}>
-                <i className="bi bi-plus-lg me-1"></i>
+              <button className="btn btn-info" onClick={onCreate}>
+      
                 Create Policy
               </button>
             )}
@@ -149,8 +149,7 @@ export default function PolicyList() {
                     <td>{toDDMMMYYYY(policy.effectiveFrom)}</td>
                     <td>{toDDMMMYYYY(policy.effectiveTo)}</td>
 
-                    <td>{policy.createdBy?.username || "-"}</td>
-                    <td>{policy.approvedBy?.username || "-"}</td>
+                    
 
                     <td className="text-end">
                       <div className="d-flex justify-content-end gap-2">
@@ -158,25 +157,24 @@ export default function PolicyList() {
                           !policy.approvedBy &&
                           policy.status !== "EXPIRED" && (
                             <button
-                              className="btn btn-outline-success btn-sm"
+                              className="btn btn-outline-info btn-sm"
                               onClick={() => onEdit(policy._id)}
                               title="Edit"
                             >
-                              <i className="bi bi-pencil-square"></i>
+                              <span style={{padding:"10px"}}><i className="bi bi-pencil-square">Edit</i></span>
                             </button>
                           )}
 
 
-{console.log(isApproveAllowed, policy.approvedBy, policy.status)}
                         {isApproveAllowed &&
                           !policy.approvedBy &&
                           policy.status !== "EXPIRED" && (
                             <button
-                              className="btn btn-outline-success btn-sm"
+                              className="btn btn-outline-info btn-sm"
                               onClick={() => onSubmit(policy)}
                               title="Submit for approval"
                             >
-                              <i className="bi bi-check-circle"></i>
+                              <i className="bi bi-check-circle">Approval</i>
                             </button>
                           )}
 
@@ -185,7 +183,7 @@ export default function PolicyList() {
                           onClick={() => setTimelineData(policy.remarks)}
                           title="View history"
                         >
-                          <i className="bi bi-eye"></i>
+                          <i className="bi bi-eye">History</i>
                         </button>
                       </div>
                     </td>

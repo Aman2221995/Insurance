@@ -111,8 +111,8 @@ export default function ReinsurerList() {
             </div>
 
             {isCreateAllowed && (
-              <button className="btn btn-success" onClick={onCreate}>
-                <i className="bi bi-plus-lg me-1"></i>
+              <button className="btn btn-info" onClick={onCreate}>
+                
                 Create Reinsurer
               </button>
             )}
@@ -147,7 +147,7 @@ export default function ReinsurerList() {
                     <td className="text-end">
                       {isEditAllowed && (
                         <button
-                          className="btn btn-outline-success btn-sm me-2"
+                          className="btn btn-outline-info btn-sm me-2"
                           onClick={() => onEdit(reinsurer)}
                           title="Edit"
                         >

@@ -43,8 +43,6 @@ export const POLICY_TABLE_COLUMNS = [
   { key: "status", label: "Status" },
   { key: "effectiveFrom", label: "Effective from" },
   { key: "effectiveTo", label: "Effective to" },
-  { key: "createdBy", label: "Created By" },
-  { key: "approvedBy", label: "Approved By" },
   { key: "actions", label: "Actions" },
 ];
 

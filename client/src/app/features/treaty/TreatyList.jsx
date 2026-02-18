@@ -69,7 +69,7 @@ export default function TreatyList() {
             </div>
 
             {isCreateAllowed && (
-              <button className="btn btn-success" onClick={onCreate}>
+              <button className="btn btn-info" onClick={onCreate}>
                 <i className="bi bi-plus-lg me-1"></i>
                 Create Treaty
               </button>
@@ -101,10 +101,10 @@ export default function TreatyList() {
                     <td className="text-end">
                       {isEditAllowed && treaty.status !== "EXPIRED" && (
                         <button
-                          className="btn btn-outline-success btn-sm"
+                          className="btn btn-outline-info btn-sm"
                           onClick={() => onEdit(treaty)}
                         >
-                          <i className="bi bi-pencil-square"></i>
+                          <i className="bi bi-pencil-square">Edit</i>
                         </button>
                       )}
                     </td>

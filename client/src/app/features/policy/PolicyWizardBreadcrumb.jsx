@@ -21,7 +21,7 @@ const PolicyWizardBreadcrumb = ({ currentStep }) => {
                     width: 44,
                     height: 44,
                     zIndex: 2,
-                    background: isActive ? "#198754" : "#fff",
+                    background: isActive ? "#3692bd" : "#fff",
                     color: isActive ? "#fff" : "#6c757d",
                     border: isActive
                       ? "none"
@@ -36,7 +36,7 @@ const PolicyWizardBreadcrumb = ({ currentStep }) => {
                 {/* LABEL */}
                 <small
                   className={`fw-semibold ${
-                    isActive || isCompleted ? "text-success" : "text-muted"
+                    isActive || isCompleted ? "text-black" : "text-muted"
                   }`}
                 >
                   {step}

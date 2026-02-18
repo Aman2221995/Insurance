@@ -18,7 +18,7 @@ export default function HighClaimBarChart({ data }) {
         <YAxis />
         <Tooltip formatter={(v) => `₹ ${v.toLocaleString()}`} />
         <Legend />
-        <Bar dataKey="totalClaimAmount" fill="#1a5947" />
+        <Bar dataKey="totalClaimAmount" fill="#3183a6" />
       </BarChart>
     </ResponsiveContainer>
   );

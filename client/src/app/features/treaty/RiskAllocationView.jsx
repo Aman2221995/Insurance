@@ -68,7 +68,7 @@ export default function RiskAllocationView() {
 
               <div className="col-md-3">
                 <button
-                  className="btn btn-success w-100"
+                  className="btn btn-info w-100"
                   style={{ height: "38px", position: "relative", top: "-1rem" }}
                   onClick={handleCheck}
                   disabled={!policyId || loading}

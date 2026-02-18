@@ -92,7 +92,8 @@ export default function ReinsurerForm({
 
     try {
       if (isEdit) {
-        await api.put(`/reinsurers/${reinsurerData._id}`, payload);
+         await api.put(`/reinsurers/${reinsurerData._id}`, payload);
+        
       } else {
         await api.post("/reinsurers/create", payload);
       }
@@ -207,7 +208,7 @@ export default function ReinsurerForm({
               >
                 Cancel
               </button>
-              <button className="btn btn-success" onClick={onSubmitHandler}>
+              <button className="btn btn-info" onClick={onSubmitHandler}>
                 {isEdit ? "Update Reinsurer" : "Create Reinsurer"}
               </button>
             </div>

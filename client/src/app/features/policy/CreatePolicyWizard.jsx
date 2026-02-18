@@ -58,9 +58,6 @@ const CreatePolicyWizard = ({ mode }) => {
                 <h5 className="mb-1">
                   {mode === "edit" ? "Edit Policy" : "Create Policy"}
                 </h5>
-                <small className="opacity-75">
-                  Configure policy details and coverage
-                </small>
               </div>
             </div>
 

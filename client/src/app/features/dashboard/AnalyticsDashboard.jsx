@@ -71,6 +71,8 @@ export default function AnalyticsDashboard() {
 
     load();
   }, []);
+  console.log("LOB Data:", lob);
+  console.log(lossRatio)
 
   if (loading) return <Loader />;
 
@@ -81,7 +83,7 @@ export default function AnalyticsDashboard() {
     <AppShell links={links}>
       <div className="container-fluid py-4">
         <div className="mb-4">
-          <h3 className="fw-semibold mb-1">Analytics Dashboard</h3>
+          <h3 className="fw-semibold mb-1">Dashboard</h3>
           <p className="text-muted mb-0">
             Overview of policies, claims, and reinsurance metrics
           </p>

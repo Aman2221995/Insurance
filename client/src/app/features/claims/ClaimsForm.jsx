@@ -194,7 +194,7 @@ export default function ClaimsForm({
               >
                 Cancel
               </button>
-              <button className="btn btn-success" onClick={onSubmitHandler}>
+              <button className="btn btn-info" onClick={onSubmitHandler}>
                 {isEdit
                   ? mode === "approve"
                     ? "Approve Claim"

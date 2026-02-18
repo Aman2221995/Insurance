@@ -113,8 +113,7 @@ export default function UserList() {
             </div>
 
             {isCreateAllowed && (
-              <button className="btn btn-success" onClick={onCreate}>
-                <i className="bi bi-plus-lg me-1"></i>
+              <button className="btn btn-info" onClick={onCreate}>
                 Create User
               </button>
             )}
@@ -147,7 +146,7 @@ export default function UserList() {
                         <div className="d-flex justify-content-end gap-2">
                           {isEditAllowed && (
                             <button
-                              className="btn btn-outline-success btn-sm"
+                              className="btn btn-outline-info btn-sm"
                               onClick={() => onEdit(user)}
                               title="Edit"
                             >

@@ -274,7 +274,7 @@ export default function TreatyForm({ onClose, showModal, treatyData = null }) {
               >
                 Cancel
               </button>
-              <button className="btn btn-success" onClick={onSubmitHandler}>
+              <button className="btn btn-info" onClick={onSubmitHandler}>
                 {isEdit ? "Update Treaty" : "Create Treaty"}
               </button>
             </div>

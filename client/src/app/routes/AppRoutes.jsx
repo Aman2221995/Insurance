@@ -11,6 +11,7 @@ import RiskAllocationView from "../features/treaty/RiskAllocationView";
 import AnalyticsDashboard from "../features/dashboard/AnalyticsDashboard";
 import ProtectedRoute from "./ProtectedRoute";
 import InvalidURL from "../shared/InvalidURL";
+import TreatyContext from "../context/TreatyContext";
 
 export default function AppRoutes() {
   return (
@@ -83,7 +84,10 @@ export default function AppRoutes() {
         path="/reinsurer"
         element={
           <ProtectedRoute allowedRoles={["REINSURANCE_ANALYST"]}>
-            <ReinsurerList />
+            <TreatyContext>
+              <ReinsurerList />
+            </TreatyContext>
+            
           </ProtectedRoute>
         }
       />
@@ -92,7 +96,10 @@ export default function AppRoutes() {
         path="/treaty"
         element={
           <ProtectedRoute allowedRoles={["REINSURANCE_ANALYST"]}>
-            <TreatyList />
+            <TreatyContext>
+              <TreatyList />
+            </TreatyContext>
+            
           </ProtectedRoute>
         }
       />

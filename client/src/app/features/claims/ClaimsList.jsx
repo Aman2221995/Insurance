@@ -131,7 +131,7 @@ export default function ClaimsList() {
             </div>
 
             {isCreateAllowed && (
-              <button className="btn btn-success" onClick={onCreate}>
+              <button className="btn btn-info" onClick={onCreate}>
                 <i className="bi bi-plus-lg me-1"></i>
                 Create Claim
               </button>
@@ -166,7 +166,7 @@ export default function ClaimsList() {
                       <div className="d-flex justify-content-end gap-2 flex-wrap">
                         {isEditAllowed && claim.status === "IN_REVIEW" && (
                           <button
-                            className="btn btn-outline-success btn-sm"
+                            className="btn btn-outline-info btn-sm"
                             onClick={() => onEdit(claim)}
                             title="Edit"
                           >
@@ -177,7 +177,7 @@ export default function ClaimsList() {
                         {isReviewAllowed && claim.status === "IN_REVIEW" && (
                           <>
                             <button
-                              className="btn btn-outline-success btn-sm"
+                              className="btn btn-outline-info btn-sm"
                               onClick={() => onApprove(claim)}
                               title="Approve"
                             >
@@ -199,11 +199,11 @@ export default function ClaimsList() {
 
                         {isReviewAllowed && claim.status === "APPROVED" && (
                           <button
-                            className="btn btn-outline-success btn-sm"
+                            className="btn btn-outline-info btn-sm"
                             onClick={() => onSettle(claim._id)}
                             title="Settle"
                           >
-                            <i className="bi bi-cash-coin"></i>
+                            <i className="bi bi-cash-coin">Settle</i>
                           </button>
                         )}
 
@@ -212,7 +212,7 @@ export default function ClaimsList() {
                           onClick={() => setTimelineData(claim.remarks)}
                           title="View history"
                         >
-                          <i className="bi bi-eye"></i>
+                          <i className="bi bi-eye">History</i>
                         </button>
                       </div>
                     </td>
